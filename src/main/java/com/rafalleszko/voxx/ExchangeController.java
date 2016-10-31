@@ -12,7 +12,7 @@ public class ExchangeController {
             method = RequestMethod.GET)
     public String exchangeRate(@PathVariable String currency) {
         if ("usd".equalsIgnoreCase(currency)) {
-            return "1.00";
+            return "2.00";
         } else {
             return "not supported";
         }
