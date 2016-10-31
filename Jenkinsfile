@@ -33,6 +33,9 @@ node {
    stage 'Acceptance Test'
    sh "test \'1.00\' = `curl $staging:8080/usd/exchange-rate`"
 
+   stage "QA Manual Approval"
+   input "QA Manual Approval"
+
    stage 'Release'
    sh "docker -H $production:2375 stop $container"
    sh "docker -H $production:2375 rm $container"
